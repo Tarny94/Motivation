@@ -1,0 +1,26 @@
+.first-page-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../../../assets/WhatsApp\ Image\ 2023-08-18\ at\ 17.54.41.png");
+    background-position: center;
+    background-size: 90rem 43rem;
+  
+    .first-page-title{
+        margin-top: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 35px;
+        padding: 20px;
+        color: whitesmoke;
+    }
+    .first-page-table{
+        background-color: whitesmoke;
+        padding: 0.5rem 1.5rem 4rem 1.5rem;
+        margin-top: 3rem;
+        border-radius: 5px;
+        
+    }
+    
+}
