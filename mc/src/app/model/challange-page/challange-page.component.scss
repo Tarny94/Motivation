@@ -1,16 +1,31 @@
-.challenge-page-conatiner{
-    margin-top: 20px;
-    border: 2px solid rgb(211, 209, 209);
-    border-top: none;
-    border-left: none;
-    cursor: pointer;
-    &:hover{
-        background-color: rgb(235, 232, 232);
+.challenge-page-conatiner {
+  margin-top: 20px;
+  border: 2px solid rgb(211, 209, 209);
+  border-top: none;
+  border-left: none;
+
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(235, 232, 232);
+  }
+  .challenge-page-details {
    
-    }
-    .challenge-page-details{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     margin: 10px 0;
+    .challenge-page-contain {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      .challenge-page-text {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         font-weight: bold;
         padding: 10px;
+      }
     }
+    .challenge-page-tasks{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+  }
 }

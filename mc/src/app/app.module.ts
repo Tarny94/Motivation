@@ -17,6 +17,9 @@ import { HistoryChallengesComponent } from './model/history-challenges/history-c
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select'
 import { MatFormFieldModule } from '@angular/material/form-field'
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import { MatFormFieldModule } from '@angular/material/form-field'
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,67 @@
-<div class="challenge-page-conatiner">
-    <div class="challenge-page-details">
-        First Challenge
+<div class="challenge-page-conatiner" *ngFor="let challenge of challenges; let i = index" >
+  <mat-expansion-panel >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{challenge.challengeName}}
+      </mat-panel-title>
+      <mat-panel-description>
+       Added on 11.02.2023
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div *ngFor="let day of repeatArray(challenge.currentDay); let  i  = index">
+      <mat-expansion-panel >
+        <mat-expansion-panel-header >
+          <mat-panel-title>
+            Day {{i+1}}
+          </mat-panel-title>
+          <mat-panel-description>
+          
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div>
+          <div *ngFor="let task of challenge.tasks" class="challenge-page-tasks">
+      <span
+        ><mat-checkbox class="example-margin">
+          {{ task }}</mat-checkbox
+        ></span
+      >
     </div>
+     </div> 
+      </mat-expansion-panel>
+    </div>
+  
+  </mat-expansion-panel>
+
 </div>
 
+<!-- 
+<div class="challenge-page-details"  >
+  <div class="challenge-page-contain" (click)="handleOpenDay(i)">
+    <div class="challenge-page-text" >{{challenge.challengeName}}</div>
+    <span class="material-icons">{{
+      isDayOpened ? "arrow_drop_up" : "arrow_drop_down"
+    }}</span>
+  </div>
+  <div *ngIf="isDayOpened">
+    <div *ngFor="let day of repeatArray(challenge.currentDay); let j = index">
+      <div>
+        <div class="challenge-page-contain" (click)="handleOpenTask(j)" >
+          <div class="challenge-page-text" >Day {{i+1}} </div>
+          <span>{{date}}</span> -->
+          <!-- <span class="material-icons">{{
+            isTaskOpened[j] ? "arrow_drop_up" : "arrow_drop_down"
+          }}</span>
+        </div>
+        <div *ngIf="isTaskOpened[j]">
+          <div *ngFor="let task of tasks" class="challenge-page-tasks">
+            <span
+              ><mat-checkbox class="example-margin">
+                {{ task }}</mat-checkbox
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
